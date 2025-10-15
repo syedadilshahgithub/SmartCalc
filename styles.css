@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 1%, 80%);
+}
+
+/* Calculator Box */
+#calculator {
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 25px;
+  width: 90%;
+  max-width: 400px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1.1);
+}
+
+/* Display */
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 3.5rem;
+  text-align: right;
+  border: none;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Keypad Grid */
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-size: 2.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn {
+  background-color: hsl(35, 100%, 55%);
+}
+
+.operator-btn:hover {
+  background-color: hsl(35, 100%, 65%);
+}
+
+.operator-btn:active {
+  background-color: hsl(35, 100%, 75%);
+}
+
+.keyboard-active {
+  background-color: hsl(0, 0%, 50%);
+  transform: scale(0.95);
+  transition: 0.1s;
+}
+.operator-btn:active,
+.operator-btn.keyboard-active {
+  background-color: hsl(35, 100%, 75%);
+}
